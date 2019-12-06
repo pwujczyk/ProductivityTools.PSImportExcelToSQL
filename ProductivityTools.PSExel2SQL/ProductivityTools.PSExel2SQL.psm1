@@ -1,4 +1,4 @@
-function Import-ExcelToDB()
+function Import-ExcelToSql()
 {
 	[cmdletbinding()]
 	param ([string]$Directory,[string]$SqlInstance,[string]$DatabaseName,[string]$SchemaName="xlsx",$DropDatabase=$false,[string]$DatabaseDirectory)
