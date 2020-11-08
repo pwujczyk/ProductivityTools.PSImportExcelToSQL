@@ -1,0 +1,22 @@
+@startuml 
+Title Create Structure
+start
+ if (DropDatabase switch) then (yes)
+ :DropDatabase;
+ endif;
+ :Create Database;
+ :Find all xlsx files in directory;
+ repeat 
+    :New SQL Table with name as xlsx file; 
+    :Take all columns from excel;
+    repeat
+    if(Excel column type is Double)
+    :Create column with name as first row name in column and float type;
+    else
+    :Create column with name as first row name in column and varchar(Max) type;
+    endif;
+    
+    repeat while (all columns processed)
+ repeat while (all xlsx files processed)
+stop
+@enduml

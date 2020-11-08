@@ -114,7 +114,7 @@ function CreateColumns()
 	{
 		$columnName = $property.Name
 		$type = $($property.Definition).split(' ')[0]
-		$sqlType="VARCHAR(200)";
+		$sqlType="VARCHAR(Max)";
 		switch ($type)
 		{
 			"double" { $sqlType="FLOAT"}

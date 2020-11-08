@@ -1,0 +1,9 @@
+@startuml
+Title General diagram
+start
+ :Create Structure;
+ :Import Data;
+ :Invoke Additional SQL;
+ stop
+ @enduml
+

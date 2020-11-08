@@ -1,0 +1,13 @@
+@startuml
+Title Import Data
+start
+ :Get All excel files;
+  repeat
+    :Get All rows;
+    repeat
+     :Generate  query to insert row;
+    repeat while (all rows processed)
+  repeat while (all excel files processed)
+ stop
+ @enduml
+
