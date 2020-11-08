@@ -26,8 +26,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ProductivityTools.PSExcel2SQL.psd1" />
-    <Compile Include="ProductivityTools.PSExel2SQL.psm1" />
+    <Compile Include="ProductivityTools.PSImportExcelToSQL.psd1" />
+    <Compile Include="ProductivityTools.PSImportExcelToSQL.psm1" />
     <Compile Include="Runner.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

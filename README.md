@@ -11,7 +11,7 @@
 </p>
 
 
-# Excel to SQL
+# Import Excel to SQL
 
 The module takes Excel files from the given directory and imports it to SQL Server database.
 <!--more-->
@@ -68,5 +68,5 @@ Imports data opens again those excel files and imports data to SQL data table to
 <img src="Images/ImportData.png" />
 
 ### Additional SQL Scripts
-Scripts don't recognize all data types, so sometimes after the import, I need to make data operations. For example, I am changing VARCHAR type to decimal for chosen columns
+Module doesn't recognize all data types, so sometimes after the import, I need to make data operations. For example, I am changing VARCHAR type to decimal for chosen columns
 
