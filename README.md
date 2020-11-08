@@ -23,6 +23,12 @@ Having data in database is great, but inserting data to it is not so simple task
 This module gets all excel files from given directory. For each excel it creates table and import data with the similar structure as in excel.
 
 It exposes only one command **Import-ExcelToSql**.
+- Directory - Path to directory where excel files are stored, if not provided, current directory will be used
+- SqlInstance - Instance of SQL Server for example ".\sql2019" 
+- DatabaseName	- Name of the database in which tables will be stored
+- SchemaName  - Schema in which all excels will be placed, default is **xlsx**
+- DropDatabase - If used database will be drop before creation
+- DatabaseDirectory - If provided mdf and ldf files will be created in this directory
 
 Below you can find couple of the diagrams which represents steps performed.
 
@@ -49,7 +55,7 @@ This part creates SQL server schema
 <img src="Images/CreateStructure.png" />
 
 ### ImportData
-Imports data opens again those excel files and imports data to SQL Data table
+Imports data opens again those excel files and imports data to SQL data table to previously created schema
 
 <img src="Images/ImportData.png" />
 
