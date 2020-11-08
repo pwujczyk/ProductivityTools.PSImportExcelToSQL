@@ -123,3 +123,5 @@ function CreateColumns()
 		New-SQLColumn -SqlInstance $SqlInstance -DataBaseName $DatabaseName -SchemaName $schemaName -TableName $TableName -ColumnName $columnName -Type $sqlType -Verbose:$VerbosePreference
 	}
 }
+
+Export-ModuleMember Import-ExcelToSql
