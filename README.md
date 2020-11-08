@@ -30,9 +30,18 @@ It exposes only one command **Import-ExcelToSql**.
 - DropDatabase - If used database will be drop before creation
 - DatabaseDirectory - If provided mdf and ldf files will be created in this directory
 
-Below you can find couple of the diagrams which represents steps performed.
+## Examples
+
+```powershell
+Import-ExcelToSql -SqlInstance ".\sql2019"  -DatabaseName "EcoVadisDT"
+Import-ExcelToSql -SqlInstance ".\sql2019"  -DatabaseName "EcoVadisDT" -SchemaName "work" -DropDatabase -Verbose
+
+```
 
 <!--og-image-->
+<img src="Images/WorkingExample.png" />
+
+Below you can find couple of the diagrams which represents steps performed.
 
 ## Diagrams 
 

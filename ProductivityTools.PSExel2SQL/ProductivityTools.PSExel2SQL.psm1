@@ -15,17 +15,25 @@ function Import-ExcelToSql()
 	[string]$SchemaName="xlsx",
 	
 	[Parameter(Mandatory=$false)]
-	$DropDatabase=$false,
+	[Switch]$DropDatabase=$false,
 	
 	[Parameter(Mandatory=$false)]
 	[string]$DatabaseDirectory)
 
 	Write-Verbose "Import Excel started"
 	
+	
 	if ($Directory -eq "")
 	{
 		$Directory=$((Resolve-Path .\).Path)
 	}
+	
+	Write-Verbose "Directory $Directory"
+	Write-Verbose "SqlInstance $SqlInstance"
+	Write-Verbose "DatabaseName $DatabaseName"
+	Write-Verbose "SchemaName $SchemaName"
+	Write-Verbose "DropDatabase $DropDatabase"
+	Write-Verbose "DatabaseDirectory $DatabaseDirectory"
 	
 	CreateStructure $Directory $SqlInstance $DatabaseName $SchemaName $DropDatabase $DatabaseDirectory
 	ImportData  $Directory $SqlInstance $DatabaseName $SchemaName	
