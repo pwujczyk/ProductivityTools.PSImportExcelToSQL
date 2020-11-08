@@ -27,12 +27,32 @@ It exposes only one command **Import-ExcelToSql**.
 Below you can find couple of the diagrams which represents steps performed.
 
 <!--og-image-->
+
+## Diagrams 
+
+### Genral Diagram
+Module performs tree steps: 
+- creates structure in database
+- performs data import from excels to SQL Server
+- invokes additional scripts
+
 <img src="Images/GeneralDiagram.png" />
 
-## CreateStructure
+### CreateStructure
+
+This part creates SQL server schema
+- it creates database, if **Drop database** switch will be used, database first will be dropped 
+- it takes all excels from given directory
+- for each excel it creates the same table as excel file name
+- for each column in excel it creates the column in table
 
 <img src="Images/CreateStructure.png" />
 
-## ImportData
+### ImportData
+Imports data opens again those excel files and imports data to SQL Data table
 
 <img src="Images/ImportData.png" />
+
+### Additional SQL Scripts
+Scripts doesn't recognize all data types, so sometimes after the import I need to make data operations. For example I am changing VARCHAR type to decimal for chosen columns
+

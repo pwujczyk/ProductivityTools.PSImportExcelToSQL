@@ -1,7 +1,24 @@
 function Import-ExcelToSql()
 {
 	[cmdletbinding()]
-	param ([string]$Directory,[string]$SqlInstance,[string]$DatabaseName,[string]$SchemaName="xlsx",$DropDatabase=$false,[string]$DatabaseDirectory)
+	param (
+	[Parameter(Mandatory=$false)]
+	[string]$Directory,
+	
+	[Parameter(Mandatory=$true)]
+	[string]$SqlInstance,
+	
+	[Parameter(Mandatory=$true)]
+	[string]$DatabaseName,
+	
+	[Parameter(Mandatory=$false)]
+	[string]$SchemaName="xlsx",
+	
+	[Parameter(Mandatory=$false)]
+	$DropDatabase=$false,
+	
+	[Parameter(Mandatory=$false)]
+	[string]$DatabaseDirectory)
 
 	Write-Verbose "Import Excel started"
 	
