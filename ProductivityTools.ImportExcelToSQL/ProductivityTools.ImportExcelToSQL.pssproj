@@ -6,7 +6,8 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>MyApplication</RootNamespace>
     <AssemblyName>MyApplication</AssemblyName>
-    <Name>PSExel2SQL</Name>
+    <Name>ProductivityTools.ImportExcelToSQL</Name>
+    <ProjectHome />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,8 +27,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ProductivityTools.PSImportExcelToSQL.psd1" />
-    <Compile Include="ProductivityTools.PSImportExcelToSQL.psm1" />
+    <Compile Include="ProductivityTools.ImportExcelToSQL.psd1" />
+    <Compile Include="ProductivityTools.ImportExcelToSQL.psm1" />
     <Compile Include="Runner.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
